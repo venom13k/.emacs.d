@@ -10,3 +10,6 @@
 [submodule "extensions/nyan-mode"]
 	path = extensions/nyan-mode
 	url = https://github.com/TeMPOraL/nyan-mode/
+[submodule "extensions/highlight-sexp"]
+	path = extensions/highlight-sexp
+	url = https://github.com/daimrod/highlight-sexp.git
