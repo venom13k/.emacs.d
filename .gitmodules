@@ -1,0 +1,12 @@
+[submodule "extensions/autopair"]
+	path = extensions/autopair
+	url = https://github.com/emacsmirror/autopair
+[submodule "extensions/rainbow-mode"]
+	path = extensions/rainbow-mode
+	url = https://github.com/emacsmirror/rainbow-mode
+[submodule "extensions/rainbow-delimiters"]
+	path = extensions/rainbow-delimiters
+	url = https://github.com/jlr/rainbow-delimiters.git
+[submodule "extensions/nyan-mode"]
+	path = extensions/nyan-mode
+	url = https://github.com/TeMPOraL/nyan-mode/
