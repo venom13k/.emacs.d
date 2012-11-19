@@ -102,3 +102,6 @@
 (require 'highlight-sexp)
 (add-hook 'lisp-mode-hook 'highlight-sexp-mode)
 (add-hook 'emacs-lisp-mode-hook 'highlight-sexp-mode)
+
+;;ipython
+(require 'ipython) (setq py-python-command-args '( "-colors" "Linux")) (defadvice py-execute-buffer (around python-keep-focus activate) "return focus to python code buffer" (save-excursion ad-do-it)) 

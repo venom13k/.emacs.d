@@ -13,3 +13,7 @@
 [submodule "extensions/highlight-sexp"]
 	path = extensions/highlight-sexp
 	url = https://github.com/daimrod/highlight-sexp.git
+
+[submodule "extensions/ipython.el"]
+	path = extensions/ipython.el
+	url = http://github.com/von/ipython.el.git
