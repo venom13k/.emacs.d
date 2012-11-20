@@ -119,6 +119,14 @@
 (add-to-list 'ac-dictionary-directories "/home/stas/.emacs.d/extensions/auto-complete/ac-dict")
 (ac-config-default)
 
+; After installing pymacs, rope
+(require 'pymacs)
+  (pymacs-load "ropemacs" "rope-")
+
+
+
+
+
 ; Look definition of function or value:
 (defun rope-goto-definition-save-place ()
    """ save current place as 'save-place' bookmark and rope-goto-definition """
@@ -135,3 +143,18 @@
  
 (global-set-key [(M return)] 'rope-goto-definition-save-place)
 (global-set-key [(M shift return)] 'rope-return)
+
+; Bookmarks
+(require 'bm)
+(global-set-key (kbd "C-z b") 'bm-toggle)
+(global-set-key (kbd "C-z <up>") 'bm-previous)
+(global-set-key (kbd "C-z C-p") 'bm-previous)
+;(global-set-key [(control shift down)] 'bm-next)
+;(global-set-key [(control shift n)] 'bm-next)
+(global-set-key (kbd "C-z <down>") 'bm-next)
+(global-set-key (kbd "C-z C-n") 'bm-next)
+(global-set-key (kbd "C-z <SPC>") 'bm-show-all)
+
+;python-doc
+(add-to-list 'load-path ""~/.emacs.d/extensions/pydoc-info")
+    (require 'pydoc-info)
