@@ -17,3 +17,4 @@
 [submodule "extensions/ipython.el"]
 	path = extensions/ipython.el
 	url = http://github.com/von/ipython.el.git
+
