@@ -18,3 +18,9 @@
 	path = extensions/ipython.el
 	url = http://github.com/von/ipython.el.git
 
+[submodule "extensions/SusColors-emacs"]
+	path = extensions/SusColors-emacs
+	url = https://github.com/TheSuspiciousWombat/SusColors-emacs.git
+[submodule "extensions/auto-complete"]
+	path = extensions/auto-complete
+	url = https://github.com/auto-complete/auto-complete.git
