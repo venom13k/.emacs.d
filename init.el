@@ -1,6 +1,8 @@
-﻿(let ((default-directory "~/.emacs.d/extensions"))
+﻿
+(let ((default-directory "~/.emacs.d/extensions"))
   (normal-top-level-add-subdirs-to-load-path))
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/extensions/color-theme-6.6.0/themes") 
 
 
 
@@ -107,54 +109,5 @@
 (add-hook 'emacs-lisp-mode-hook 'highlight-sexp-mode)
 (add-hook 'python-mode-hook 'highlight-sexp-mode)
 (add-hook 'c-mode-hook 'highlight-sexp-mode)
+(add-hook 'js-mode-hook 'highlight-sexp-mode)
 
-
-;;ipython
-(add-to-list 'load-path "~/.emacs.d/extensions/ipython.el")
-(require 'ipython) (setq py-python-command-args '( "--colors=Linux")) (defadvice py-execute-buffer (around python-keep-focus activate) "return focus to python code buffer" (save-excursion ad-do-it)) 
-
-; Autocomplete python
-(add-to-list 'load-path "/home/stas/.emacs.d/extensions/auto-complete")
-(require 'auto-complete-config) (global-auto-complete-mode t)
-(add-to-list 'ac-dictionary-directories "/home/stas/.emacs.d/extensions/auto-complete/ac-dict")
-(ac-config-default)
-
-; After installing pymacs, rope
-(require 'pymacs)
-  (pymacs-load "ropemacs" "rope-")
-
-
-
-
-
-; Look definition of function or value:
-(defun rope-goto-definition-save-place ()
-   """ save current place as 'save-place' bookmark and rope-goto-definition """
-   (interactive)
-   (bookmark-set "save-place" 1)
-   (rope-goto-definition)
-)
- 
-(defun rope-return ()
-   """ save current place as 'save-place' bookmark and rope-goto-definition """
-   (interactive)
-   (bookmark-jump "save-place")
-)
- 
-(global-set-key [(M return)] 'rope-goto-definition-save-place)
-(global-set-key [(M shift return)] 'rope-return)
-
-; Bookmarks
-(require 'bm)
-(global-set-key (kbd "C-z b") 'bm-toggle)
-(global-set-key (kbd "C-z <up>") 'bm-previous)
-(global-set-key (kbd "C-z C-p") 'bm-previous)
-;(global-set-key [(control shift down)] 'bm-next)
-;(global-set-key [(control shift n)] 'bm-next)
-(global-set-key (kbd "C-z <down>") 'bm-next)
-(global-set-key (kbd "C-z C-n") 'bm-next)
-(global-set-key (kbd "C-z <SPC>") 'bm-show-all)
-
-;python-doc
-(add-to-list 'load-path ""~/.emacs.d/extensions/pydoc-info")
-    (require 'pydoc-info)
